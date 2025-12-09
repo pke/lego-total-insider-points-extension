@@ -14,26 +14,26 @@ This extension helps LEGO Insider members track their total accumulated points b
 
 ### 1. Install the extension for your browser
 
-[Brave](https://chromewebstore.google.com/detail/nejpchjnedkicmoccaccjnljdmdgelmb)
-[Chrome](https://chromewebstore.google.com/detail/nejpchjnedkicmoccaccjnljdmdgelmb)
-[Edge](https://microsoftedge.microsoft.com/addons/detail/geeffodmpkcpeikbchllbnhibhgddemi)
-[Firefox](https://addons.mozilla.org/en-GB/firefox/addon/lego-total-insider-points/)
+[Brave](https://chromewebstore.google.com/detail/nejpchjnedkicmoccaccjnljdmdgelmb)  
+[Chrome](https://chromewebstore.google.com/detail/nejpchjnedkicmoccaccjnljdmdgelmb)  
+[Edge](https://microsoftedge.microsoft.com/addons/detail/geeffodmpkcpeikbchllbnhibhgddemi)  
+[Firefox](https://addons.mozilla.org/en-GB/firefox/addon/lego-total-insider-points/)  
 
 ### 2. Sign in to your LEGO® account on lego.com
 
 Navigate to any page showing your Insider points (on the top right).
 
-See your total points displayed below your redeemable points:
-23,703 Points ← Redeemable (shown by LEGO®)
-∑ 47,264 ← Total (added by extension)
+See your total points displayed below your redeemable points:  
+23,703 Points ← Redeemable (shown by LEGO®)  
+∑ 47,264 ← Total (added by extension)  
 
 ## Features
 
-✨ **Total Points Display** - See your lifetime Insider points at a glance
-💰 **Money Spent Calculator** - Optional display of estimated spending
-🎨 **11 Custom Symbols** - Personalize your display
-🌍 **Multi-language** - Support for EN, DE, FR, ES, IT, NL
-🔒 **Privacy First** - No data collection, everything stays local
+✨ **Total Points Display** - See your lifetime Insider points at a glance  
+💰 **Money Spent Calculator** - Optional display of estimated spending  
+🎨 **11 Custom Symbols** - Personalize your display  
+🌍 **Multi-language** - Support for EN, DE  
+🔒 **Privacy First** - No data collection, everything stays local  
 
 ## How it works
 
@@ -57,19 +57,19 @@ The extension also shows you the amount of money you must have spent to gain thi
 
 ## Privacy
 
-✅ Only reads data from lego.com
-✅ Settings stored locally on your device
-✅ No analytics or tracking
-✅ No data sent to external servers
-✅ Open source - verify [the code](https://github.com/pke/lego-total-points-extension) yourself
+✅ Only reads data from lego.com  
+✅ Settings stored locally on your device  
+✅ No analytics or tracking  
+✅ No data sent to external servers  
+✅ Open source - verify [the code](https://github.com/pke/lego-total-points-extension) yourself  
 
 ## Support
 
 Having issues?
 
-✅ Check you're signed in to lego.com
-♻️ Refresh the page
-⚠️ Report an issue on [GitHub Issues](https://github.com/pke/lego-total-points-extension/issues)
+✅ Check you're signed in to lego.com  
+♻️ Refresh the page  
+⚠️ Report an issue on [GitHub Issues](https://github.com/pke/lego-total-points-extension/issues)  
 
 ## Acknowledgements
 
