@@ -1,5 +1,7 @@
 # LEGO Total Insider Points Browser Extension
 
+![total points](https://github.com/pke/lego-total-insider-points-extension/blob/main/images/infinite.png?raw=true)
+
 ## Usage
 
 ### 1. Install the extension for your browser
