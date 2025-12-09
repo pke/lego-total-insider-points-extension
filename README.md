@@ -14,10 +14,10 @@ This extension helps LEGO Insider members track their total accumulated points b
 
 ### 1. Install the extension for your browser
 
-[Chrome](https://chromewebstore.google.com/detail/nejpchjnedkicmoccaccjnljdmdgelmb)
-[Firefox](https://addons.mozilla.org/en-GB/firefox/addon/lego-total-insider-points/)
-[Edge](https://microsoftedge.microsoft.com/addons/detail/geeffodmpkcpeikbchllbnhibhgddemi)
 [Brave](https://chromewebstore.google.com/detail/nejpchjnedkicmoccaccjnljdmdgelmb)
+[Chrome](https://chromewebstore.google.com/detail/nejpchjnedkicmoccaccjnljdmdgelmb)
+[Edge](https://microsoftedge.microsoft.com/addons/detail/geeffodmpkcpeikbchllbnhibhgddemi)
+[Firefox](https://addons.mozilla.org/en-GB/firefox/addon/lego-total-insider-points/)
 
 ### 2. Sign in to your LEGO® account on lego.com
 
@@ -29,10 +29,10 @@ See your total points displayed below your redeemable points:
 
 ## Features
 
-✨ **Total Points Display** - See your lifetime Insider points at a glance  
-💰 **Money Spent Calculator** - Optional display of estimated spending  
-🎨 **11 Custom Symbols** - Personalize your display  
-🌍 **Multi-language** - Support for EN, DE, FR, ES, IT, NL  
+✨ **Total Points Display** - See your lifetime Insider points at a glance
+💰 **Money Spent Calculator** - Optional display of estimated spending
+🎨 **11 Custom Symbols** - Personalize your display
+🌍 **Multi-language** - Support for EN, DE, FR, ES, IT, NL
 🔒 **Privacy First** - No data collection, everything stays local
 
 ## How it works
