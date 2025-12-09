@@ -1,0 +1,66 @@
+{
+  "extensionName": {
+    "message": "Total Insider Points Display",
+    "description": "Name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Displays the total collected Insider points next to your points balance on the website.",
+    "description": "Description of the extension"
+  },
+  "optionsTitle": {
+    "message": "Total Insider Points Settings",
+    "description": "Options page title"
+  },
+  "optionsSubtitle": {
+    "message": "Choose which symbol to display before the total points count.",
+    "description": "Options page subtitle"
+  },
+  "displayOptions": {
+    "message": "Display Options",
+    "description": "Section title for display options"
+  },
+  "showMoneySpent": {
+    "message": "Show estimated money spent",
+    "description": "Checkbox label for showing money spent calculation"
+  },
+  "categoryMostCommon": {
+    "message": "Most Common Choices",
+    "description": "Category title for common symbols"
+  },
+  "categoryTrophy": {
+    "message": "Trophy/Achievement",
+    "description": "Category title for trophy symbols"
+  },
+  "categoryOther": {
+    "message": "Other Useful Symbols",
+    "description": "Category title for other symbols"
+  },
+  "previewLabel": {
+    "message": "Preview:",
+    "description": "Label for preview section"
+  },
+  "settingsSaved": {
+    "message": "Settings saved!",
+    "description": "Success message when settings are saved"
+  },
+  "showMoneySpent1": {
+    "message": "Show how many bricks I've bought 💰|Show my brick investment 🧱💶|Calculate my LEGO® budget damage 😅|Show what I've spent on plastic happiness",
+    "description": "Brick-themed options for showing money spent"
+  },
+  "showMoneySpent2": {
+    "message": "Show my dedication level 💪|Show how much I've invested in fun|Reveal my collector status 🏆|Show my master builder investment",
+    "description": "Achievement-themed options for showing money spent"
+  },
+  "showMoneySpent3": {
+    "message": "Show the truth about my spending 😬|Show how much joy costs 😊|Calculate my plastic addiction 🤑|Show my brick budget (don't tell anyone 🤫)|Reveal my colorful financial decisions 🌈",
+    "description": "Humorous options for showing money spent"
+  },
+  "showMoneySpent4": {
+    "message": "Show what I've spent so far|Show my total investment|Show how much I've treated myself 🎁|Show my LEGO® journey in euros",
+    "description": "Casual/Friendly options for showing money spent"
+  },
+  "showMoneySpent5": {
+    "message": "Show my high score in € 🎯|Unlock spending stats 📊|Show my builder level investment|Display total quest rewards spent",
+    "description": "Gamified options for showing money spent"
+  }
+}

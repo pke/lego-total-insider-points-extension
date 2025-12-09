@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title data-i18n="optionsTitle">LEGO Insider Points Display - Settings</title>
+  <style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f5f5f5;
+  }
+
+  h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .section h2 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .symbol-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+  }
+
+  .symbol-option:hover {
+    border-color: #005baa;
+    background: #f0f7ff;
+    transform: scale(1.05);
+  }
+
+  .symbol-option input[type="radio"] {
+    display: none;
+  }
+
+  .symbol-option {
+      position: relative;
+      display: block;
+    }
+
+    /* Hide the actual radio button */
+    .symbol-option input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* Style the visual container */
+    .symbol-display {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      justify-content: center;
+      padding: 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: #fafafa;
+      aspect-ratio: 1;
+      font-size: 40px;
+      line-height: 1;
+    }
+
+    /* Hover state */
+    .symbol-option:hover .symbol-display {
+      border-color: #005baa;
+      background: #f0f7ff;
+    }
+
+    /* Selected state using :checked */
+    .symbol-option input[type="radio"]:checked + .symbol-display {
+      border-color: #005baa;
+      background: #e3f2fd;
+
+    }
+
+  .status {
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    display: none;
+  }
+
+  .status.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+
+  .preview {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 4px solid #005baa;
+  }
+
+  .preview-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .preview-display {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <h1 data-i18n="optionsTitle">Total Insider Points Settings</h1>
+  <p class="description" data-i18n="optionsSubtitle">Choose which symbol to display before the total points count.</p>
+
+  <div id="symbols-container"></div>
+
+  <div class="preview">
+    <div class="preview-label" data-i18n="previewLabel">Preview:</div>
+    <div class="preview-display" id="preview"></div>
+  </div>
+
+  <div class="status" id="status"></div>
+
+  <script src="utils.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

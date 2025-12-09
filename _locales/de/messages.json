@@ -1,0 +1,44 @@
+{
+  "extensionName": {
+    "message": "Gesamt Insider Punkte Anzeige"
+  },
+  "extensionDescription": {
+    "message": "Zeigt die gesamten, bisher gesammelten Insider Punkte zusammen mit den aktuellen Punkten auf der Webseite an."
+  },
+  "optionsTitle": {
+    "message": "Gesamt Insider Punkte Einstellungen"
+  },
+  "optionsSubtitle": {
+    "message": "Symbol, welches vor der Gesamtpunktzahl angezeigt werden soll."
+  },
+  "categoryMostCommon": {
+    "message": "Häufigste Auswahl"
+  },
+  "categoryTrophy": {
+    "message": "Trophäe/Erfolg"
+  },
+  "categoryOther": {
+    "message": "Andere nützliche Symbole"
+  },
+  "previewLabel": {
+    "message": "Vorschau:"
+  },
+  "settingsSaved": {
+    "message": "Einstellungen gespeichert!"
+  },
+  "showMoneySpent1": {
+    "message": "Zeig, wie viele Steine ich gekauft habe 💰|Zeig meine Stein-Investition 🧱💶|Berechne meinen LEGO® Budget-Schaden 😅|Zeig, was ich für Plastik-Glück ausgegeben habe"
+  },
+  "showMoneySpent2": {
+    "message": "Zeig mein Engagement-Level 💪|Zeig, wie viel ich in Spaß investiert habe|Zeig meinen Sammler-Status 🏆|Zeig meine Meisterbauer-Investition"
+  },
+  "showMoneySpent3": {
+    "message": "Zeig die Wahrheit über meine Ausgaben 😬|Zeig, wie viel Freude kostet 😊|Berechne meine Plastik-Sucht 🤑|Zeig mein Stein-Budget (verrat's niemandem 🤫)|Zeig meine bunten finanziellen Entscheidungen 🌈"
+  },
+  "showMoneySpent4": {
+    "message": "Zeig, was ich bisher ausgegeben habe|Zeig meine Gesamtinvestition|Zeig, wie viel ich mir gegönnt habe 🎁|Zeig meine LEGO® Reise in Euro"
+  },
+  "showMoneySpent5": {
+    "message": "Zeig meinen Highscore in € 🎯|Schalte Ausgaben-Statistiken frei 📊|Zeig meine Baumeister-Level-Investition|Zeig ausgegebene Quest-Belohnungen"
+  }
+}

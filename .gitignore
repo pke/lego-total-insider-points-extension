@@ -1,0 +1,7 @@
+.DS_Store
+dist
+docs/login.txt
+node_modules
+.env
+.env.local
+coverage
