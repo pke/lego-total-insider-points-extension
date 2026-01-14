@@ -35,22 +35,17 @@
 
   const { calculateMoneySpent } = window.totalInsiderPoints;
 
-  // Update the points display
-  function updatePointsDisplay(totalPoints) {
-    if (totalPoints === null || totalPoints === undefined) return;
-
-    cachedTotalPoints = totalPoints;
-
-    const span = document.querySelector('span[data-test="insiders-points"]');
-    if (!span) {
-      console.log('[LEGO Total Insider Points Extension] Span not found yet, waiting...');
-      return;
-    }
+  /**
+   * Format total points display text with optional money spent
+   * @param {number} totalPoints - Total VIP points
+   * @returns {string} Formatted display text
+   */
+  function formatTotalPointsText(totalPoints) {
+    if (totalPoints === null || totalPoints === undefined) return '';
 
     const numberFormat = userCountry || getNumberFormat();
     const formattedPoints = totalPoints.toLocaleString(numberFormat);
 
-    // Build display text
     let displayText = `${selectedSymbol} ${formattedPoints}`;
 
     // Add money spent if enabled and country is known
@@ -60,6 +55,26 @@
         displayText += ` (≈${moneySpent})`;
       }
     }
+
+    return displayText;
+  }
+
+  /**
+   * Update the points display in the header
+   * @param {number} totalPoints - Total VIP points
+   */
+  function updatePointsDisplay(totalPoints) {
+    if (totalPoints === null || totalPoints === undefined) return;
+
+    cachedTotalPoints = totalPoints;
+
+    const span = document.querySelector('span[data-test="insiders-points"]');
+    if (!span) {
+      console.log('[LEGO Total Insider Points Extension] Header span not found yet, waiting...');
+      return;
+    }
+
+    const displayText = formatTotalPointsText(totalPoints);
 
     // Add/update CSS custom property for the content
     span.style.setProperty('--total-points', `"\\A${displayText}"`);
@@ -77,7 +92,50 @@
       document.head.appendChild(style);
     }
 
-    console.log('[LEGO Total Insider Points Extension] Total points displayed:', displayText);
+    console.log('[LEGO Total Insider Points Extension] Header total points displayed:', displayText);
+  }
+
+  /**
+ * Update the member profile page card with total points
+ * @param {number} totalPoints - Total VIP points
+ */
+function updateMemberPageCard(totalPoints) {
+  if (totalPoints === null || totalPoints === undefined) return;
+
+  // Find the profile card by class pattern (handles dynamic class names)
+  const profileCard = document.querySelector('[class*="InsidersProfileCard_points__"]');
+  if (!profileCard) {
+    console.log('[LEGO Total Insider Points Extension] Member page card not found yet, waiting...');
+    return;
+  }
+
+
+  // Check if we already added the element
+  const existingElement = profileCard.querySelector('.total-points-extension');
+  if (existingElement) {
+    // Update existing element
+    existingElement.textContent = formatTotalPointsText(totalPoints);
+    return;
+  }
+
+  // Create new paragraph element
+  const totalPointsElement = document.createElement('p');
+  totalPointsElement.className = 'total-points-extension';
+  totalPointsElement.textContent = formatTotalPointsText(totalPoints);
+
+  // Append to the container (after the existing p elements)
+  profileCard.appendChild(totalPointsElement);
+
+  console.log('[LEGO Total Insider Points Extension] Member page card updated:', formatTotalPointsText(totalPoints));
+}
+
+  /**
+   * Update all displays with total points
+   * @param {number} totalPoints - Total VIP points
+   */
+  function updateAllDisplays(totalPoints) {
+    updatePointsDisplay(totalPoints);
+    updateMemberPageCard(totalPoints);
   }
 
   // Handle response for both fetch and XHR
@@ -85,39 +143,51 @@
     const totalPoints = parseUserQueryResponse(responseData);
     if (totalPoints !== null) {
       console.log('[LEGO Total Insider Points Extension] Total Insider Points:', totalPoints);
-      updatePointsDisplay(totalPoints);
+      cachedTotalPoints = totalPoints;
+      updateAllDisplays(totalPoints);
     }
   }
 
-  // Watch for the span element to appear
-  function waitForElement() {
-    const existingSpan = document.querySelector('span[data-test="insiders-points"]');
-    if (existingSpan && cachedTotalPoints !== null) {
-      updatePointsDisplay(cachedTotalPoints);
+  /**
+   * Watch for elements to appear
+   */
+  function waitForElements() {
+    // Check for existing elements
+    if (cachedTotalPoints !== null) {
+      updateAllDisplays(cachedTotalPoints);
     }
 
     const observer = new MutationObserver((_mutations) => {
-      const span = document.querySelector('span[data-test="insiders-points"]');
-      const displayElement = document.getElementById('total-points-display');
+      if (cachedTotalPoints !== null) {
+        // Check header span
+        const span = document.querySelector('span[data-test="insiders-points"]');
+        if (span && !span.style.getPropertyValue('--total-points')) {
+          console.log('[LEGO Total Insider Points Extension] Header span found!');
+          updatePointsDisplay(cachedTotalPoints);
+        }
 
-      if (span && !displayElement && cachedTotalPoints !== null) {
-        console.log('[LEGO Total Insider Points Extension] Span found!');
-        updatePointsDisplay(cachedTotalPoints);
+        // Check member page card
+        const profileCard = document.querySelector('[class*="InsidersProfileCard_points__"]');
+        if (profileCard) {
+          if (profileCard && !profileCard.querySelector('.total-points-extension')) {
+            console.log('[LEGO Total Insider Points Extension] Member page card found!');
+            updateMemberPageCard(cachedTotalPoints);
+          }
+        }
       }
     });
 
-    // Might optimise later by observing a more specific parent element
     observer.observe(document.body, {
       childList: true,
       subtree: true
     });
   }
 
-  // Start watching for element when DOM is ready
+  // Start watching for elements when DOM is ready
   if (document.body) {
-    waitForElement();
+    waitForElements();
   } else {
-    document.addEventListener('DOMContentLoaded', waitForElement);
+    document.addEventListener('DOMContentLoaded', waitForElements);
   }
 
   // Listen for updates from storage bridge
@@ -135,9 +205,9 @@
         console.log('[LEGO Total Insider Points Extension] Show money updated to:', showMoneySpent);
       }
 
-      // Re-render display if we have cached points
+      // Re-render all displays if we have cached points
       if (cachedTotalPoints !== null) {
-        updatePointsDisplay(cachedTotalPoints);
+        updateAllDisplays(cachedTotalPoints);
       }
     }
   });
